@@ -1,0 +1,58 @@
+.about{
+    width: 100vw;
+    overflow-y:visible ;
+    
+}
+.about .about-overlay {
+ 
+  }
+.about .container{
+    height: 80%;
+    max-height: 92%;
+}
+.img-pupple-show{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    border: 15px solid #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-image: url(../../../public/imgs/personal2.png), linear-gradient(to top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+.info-pupple .head{    font-weight: 400;}
+.info-pupple .paragraph{
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.skills-item{
+    color: var(--gray);
+    transition: all 0.25s linear;
+}
+.skills-item:hover{
+    color: var(--violet);
+    cursor: pointer;
+    transform: scale(1.5) ;
+    opacity: 1;
+}
+.about p{
+   letter-spacing: 2px;
+   line-height: 2rem;
+}
+.about span.working{
+    font-size: 0.9rem !important;
+    color: white;
+}
+.about span.working span.flag{
+    animation: go 1s infinite linear;
+}
+@keyframes go{
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity:0.9;
+    }
+
+}

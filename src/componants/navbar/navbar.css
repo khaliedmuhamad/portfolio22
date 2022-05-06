@@ -1,0 +1,11 @@
+nav a.navbar-brand{
+    color: var(--violet);
+    font-size: 1.8rem;
+}
+
+nav a.nav-link{
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: system-ui;
+}

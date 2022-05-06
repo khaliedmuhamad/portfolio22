@@ -1,0 +1,102 @@
+.home {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../../public/imgs/homebg.png)}
+.home .home-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #f4f8ffe0;
+}
+
+.home .my-info .hi {
+  color: var(--gray);
+  font-weight: 200;
+}
+.home .my-info .name {
+  font-weight: 400;
+}
+
+
+.home .my-info .job span{
+  color: var(--gray);
+  font-weight: 200;
+  text-transform: capitalize;
+  transform: translateY(3px);
+}
+
+
+#lines-svg line{
+  transform: scale(1.1);
+  stroke: var(--violet);
+}
+#lines-svg line:nth-last-of-type(1) {
+  animation: lin1 2s infinite;
+
+}
+
+#lines-svg line:nth-last-of-type(2) {
+  animation: lin2 1.9s infinite;
+
+}
+#lines-svg line:nth-last-of-type(3) {
+  animation: lin3 1.8s infinite;
+
+}
+
+@keyframes lin1 {
+  0% {
+    transform: translate(10926px, 5339.5px);
+  }
+  25% {
+    transform: translate(10936px, 5339.5px);
+  }
+  75% {
+    transform: translate(10957px, 5339.5px);
+  }
+
+  100% {
+    transform: translate(10926px, 5339.5px);
+  }
+}
+@keyframes lin2 {
+  0% {
+    transform: translate(10926px, 5329.5px);
+  }
+  25% {
+    transform: translate(10933px, 5329.5px);
+  }
+  75% {
+    transform: translate(10957px, 5329.5px);
+  }
+  100% {
+    transform: translate(10926px, 5329.5px);
+  }
+}
+@keyframes lin3 {
+  0% {
+    transform: translate(10926px, 5319.5px);
+  }
+  25% {
+    transform: translate(10935px, 5319.5px);
+  }
+  75% {
+    transform: translate(10957px, 5319.5px);
+  }
+
+  100% {
+    transform: translate(10926px, 5319.5px);
+  }
+}
+
+.lol{
+  position: absolute;
+  right: 15px;
+}
+.avatar{
+  width: 100%;
+  height: 100%;
+  
+}
