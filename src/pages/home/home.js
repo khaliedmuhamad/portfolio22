@@ -8,6 +8,7 @@ import Navbar from "../../componants/navbar/navbar";
 import Sociallinks from "../../componants/sociallinks/sociallinks";
 import "./home.css";
 import linearS from "./lines";
+import Footer from "../../componants/footer/Footer";
 function Home() {
   const [carrers] = useState([
     {
@@ -46,18 +47,17 @@ function Home() {
 
     },
   ]);
-
+  const [dark,setDark] =useState(false)
   const [Cindex, setCindex] = useState(0);
 
   useEffect(() => {
-
   }, [Cindex]);
 
   return (
-    <div className="home m-0 ">
-      <div className="home-overlay">
-      <Navbar />
-        <div className="container">
+    <div className="m-0 page">
+      <div className={` page-overlay ${!dark ? "light":"dark"} `}>
+      <Navbar getDark={setDark} />
+        <div className="container content">
           <div className="d-flex align-items-center ">
             <div className="col-4 my-info   text-left">
               <h2 className="hi">Hello! I'm</h2>
@@ -74,6 +74,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
       
     </div>

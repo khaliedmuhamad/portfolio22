@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import "./carousel.css";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 

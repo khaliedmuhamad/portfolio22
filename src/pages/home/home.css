@@ -1,15 +1,3 @@
-.home {
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../../../public/imgs/homebg.png)}
-.home .home-overlay {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: #f4f8ffe0;
-}
 
 .home .my-info .hi {
   color: var(--gray);
@@ -26,7 +14,6 @@
   text-transform: capitalize;
   transform: translateY(3px);
 }
-
 
 #lines-svg line{
   transform: scale(1.1);

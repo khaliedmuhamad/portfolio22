@@ -6,6 +6,7 @@ import {DiBootstrap, DiCss3Full, DiJqueryLogo, DiJsBadge, DiNodejs, DiReact, DiS
 import {SiExpress, SiPug, SiTypescript} from "react-icons/si"
 import {BsFillTerminalFill} from "react-icons/bs";
 import {FaGit} from "react-icons/fa";
+import Footer from "../../componants/footer/Footer";
 export default function About() {
   const [skillslang] = useState([
     { tech: "html5", logo: <AiOutlineHtml5 /> },
@@ -33,6 +34,8 @@ export default function About() {
       console.log("gooood...");
     }
   };
+  const [dark,setDark] =useState(false)
+
 
   window.addEventListener("resize", () => {
     dynamicStylesAbout(imgPupple);
@@ -42,10 +45,10 @@ export default function About() {
 
   console.log(typeof imgPupple);
   return (
-    <div className="home about m-0 ">
-      <div className="home-overlay about-overlay">
-        <Navbar />
-        <div className="container">
+    <div className="about page m-0 ">
+      <div className={`about page-overlay ${!dark ? "light":"dark"} `}>
+      <Navbar getDark={setDark} />
+        <div className="container content">
           <div className="row align-items-center h-100 d-flex">
             <div className="col-4  ">
               <div className="d-flex flex-column">
@@ -101,6 +104,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -7,3 +7,36 @@
   --black:#000000;
   --violet:#4E00B4;
 }
+.page{
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../public/imgs/homebg.png)
+}
+.page-overlay.light{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background: #f4f8ffe0;
+}
+.page-overlay.dark{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background:#5b02cfe6 ;
+
+}
+.page-overlay.dark .content{
+color: wheat;
+}
+.page-overlay .navbar{
+  height: 10%;
+}
+.page-overlay .content{
+  height: 85%;
+  max-height: 85%;
+}
+.page-overlay .footer{
+  height: 5%;
+}

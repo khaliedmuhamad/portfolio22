@@ -1,7 +1,6 @@
-
-.work-overlay .container{
+.work{
     position: relative;
-    height: 70%;
+    top: 0;
 } 
 .work-pupples{
 position: absolute;
@@ -31,7 +30,7 @@ border: 20px solid #ffffff;
 .work-pupples:nth-of-type(3){
     width: 30rem;
     height: 30rem;  
-    top: 10%;
+    top: 20%;
     left: 0%;
     animation: rotate 4s infinite linear;
 
