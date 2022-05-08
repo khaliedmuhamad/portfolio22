@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Router } from 'react-router-dom';
+import LinksDropDown from '../linksDropdown/LinksDropDown';
 import "./navbar.css";
 
 const Navbar = () => {
@@ -21,7 +22,10 @@ const Navbar = () => {
           <Link activeClassName="active" className="nav-link" to="/about">about</Link>
         </li>
         <li class="nav-item">
-          <Link activeClassName="active" className="nav-link" to="/work">work</Link>
+          <Link activeClassName="active" className="nav-link" to="/work">
+            
+           {<LinksDropDown />} 
+            </Link>
         </li>
         <li class="nav-item">
           <Link activeClassName="active" className="nav-link" to="/contact">contact</Link>

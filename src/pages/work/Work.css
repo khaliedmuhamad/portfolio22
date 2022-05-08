@@ -1,6 +1,7 @@
 
 .work-overlay .container{
     position: relative;
+    height: 70%;
 } 
 .work-pupples{
 position: absolute;
@@ -14,19 +15,27 @@ border: 20px solid #ffffff;
 .work-pupples:nth-of-type(1){
     width: 20rem;
     height: 20rem;
-    left: 50%;
+    left: 40%;
+    top: 0%;
+    animation: rotate 2s infinite linear;
+
 }
 .work-pupples:nth-of-type(2){
     width: 25rem;
     height: 25rem;  
-    top: 60%;
-    left: 80%;
+    top: 40%;
+    left: 60%;
+    animation: rotate 3s infinite linear;
+
 }
 .work-pupples:nth-of-type(3){
     width: 30rem;
     height: 30rem;  
-    top: 20%;
-    left: 10%;}
+    top: 10%;
+    left: 0%;
+    animation: rotate 4s infinite linear;
+
+}
 
 .work-pupples:before{
     content: "";
@@ -43,9 +52,14 @@ border: 20px solid #ffffff;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
     transition: 0.5s all;
-    opacity: 0;
+    opacity:1;
     }
+    
+
 .work-pupples:hover:before{
+    background: -webkit-gradient(linear, left top, left bottom, from(#f0ac5454) ,to(#a5d1e1));
+    background: -o-linear-gradient(top, #f0ac5454 ,#a5d1e1);
+    background: linear-gradient(to bottom, #f0ac5454 ,#a5d1e1);
     opacity: 1;
     }
     .work-more{
@@ -54,14 +68,30 @@ border: 20px solid #ffffff;
         position: absolute;
         top: 25%;
         left: 10%;
-        transform: translate(-10px,20px);
+        color: var(--violet);
+        padding:20% ;
+        transform: translate(0px,0px);
         transition: 0.5s all;
-        opacity: 0;
+        opacity:1;
+        z-index: 999;
+
         
     }
+    .work-more    span{
+        font-weight: 400;
+    }
     .work-pupples:hover   .work-more{
-        transform: translate(0px,-20px);
-        z-index: 999;
+        transform: translate(0px,-30px);
+
         opacity: 1;
+        background-color: #00000013;
+        border-radius: 20px;
  
+    }
+    @keyframes rotate {
+        0%{transform: translate(0px,0px);}
+        25%{transform: translate(-5px,-5px)}
+        50%{transform: translate(0px,-5px)}
+        75%{transform: translate(-5px,5px)}
+        100%{transform: translate(0px,-0px)}
     }
