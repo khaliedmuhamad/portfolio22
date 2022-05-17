@@ -5,7 +5,7 @@ const  Footer = () => {
   return (
     <div className="footer w-100 d-flex justify-content-between">
       <div className="copy-rights ms-5">© 2022 Khaled Mohamed ❤</div>
-      <div className="language">
+      <div className="language me-3">
         <div className="btn-group dropup h-100">
           <button
             type="button"

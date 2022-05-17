@@ -27,7 +27,6 @@ const [data] = useState([
           <Link to={`/work/${e.href}`} className="d-block" >
           <div className="work-more w-100 h-100 text-center text-capitalize">
             <span>{e.content}</span>
-
               <button className="btn btn-primary btn-sm p-2" >
                 Projects 🌋
               </button> 

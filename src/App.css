@@ -8,7 +8,7 @@
   --violet:#4E00B4;
 }
 .page{
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   width: 100vw;
   height: 100vh;

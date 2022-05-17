@@ -44,7 +44,7 @@ props.getDark(dark)
     </div>
     <div className={`darkOptions shadow bg-primary ${dark ? "dark": "light"}`} onClick={()=> setDark(!dark)}>
      <span className={`d-inline-block ${dark ? "dark": "light"}`}>
-      {dark ?   <FaSun  /> : <BsFillMoonFill  />     }
+      
 </span>
     </div>
 

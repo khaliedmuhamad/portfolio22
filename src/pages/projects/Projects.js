@@ -1,39 +1,55 @@
 import React,{useEffect, useState} from 'react'
+import Options from '../../componants/Options/Options';
 import Footer from '../../componants/footer/Footer';
 import Navbar from '../../componants/navbar/navbar'
-
+import "./Projects.css"
+import ProjectCard from '../../componants/Projects/ProjectCard/ProjectCard';
 const Projects = (props) => {
   const [dark,setDark] =useState(false)
+  const [optionshow,setOption] = useState({
+    filter:"all",
+    sort:"name"
+  })
 
   useEffect(() => {
   }, [dark]);
 
 
-const [techFilter, setTechFilter] = useState("all");
-console.log(window.location.href)
-const filterHandel = (e) =>{
-  if (techFilter == "all"){return e.name !== null }else{return e.techo ===  techFilter}  
-}
+
+  const filterHandel = (e) =>{
+    if (optionshow.filter == "all"){return e.name !== null }else{return e.techo ===  optionshow.filter}  
+  }
+  const sortHandel = (a,b) =>{
+    if(optionshow.sort == "name") {
+    if(a.name < b.name) { return -1; }
+    if(a.name > b.name) { return 1; }
+    return 0;
+  } else if (optionshow.sort == "date") {
+    return new Date(b.date) - new Date(a.date);
+  }
+
+
+  }  
+
     return(
-    <div className="page work m-0 ">
-      <div className={` page-overlay ${!dark ? "light":"dark"} `}>
+    <div className="page  work m-0 ">
+      <div className={` page-overlay projects-overlay ${!dark ? "light":"dark"} `}>
       <Navbar getDark={setDark} />
         <div className="container content">
-          <h1>{window.location.href }</h1>
-          {props.data.techarr.map(e=> <button className={`btn btn-warning bt-lg me-3 my-5`} onClick={()=>{setTechFilter(e)}}>{e}</button>)}
+          
+          <h1 className='text-capitalize text-danger'>{props.data.head}</h1>
+          {<Options data={props.data}  getOptions={setOption}  />}
             <div className='row'>
-            {props.data.projects.filter((e)=>filterHandel(e) ).map((e,i)=> <div className={`card  col-4`} >
-              <div className={`p-2 bg-${e.bg}`}>
-              {/*"<img src="..." className="card-img-top" alt="..." />"*/}
-              <div className="card-body">
-                <h5 className="card-title">{e.name}</h5>
-                <p className="card-text">{e.summury}.</p>
-                <a href="#" className="btn btn-primary">{e.link}</a>
-                </div>
-              </div>
-            </div>
-            )}
+            { (props.data.projects || []).filter((e) =>filterHandel(e)).sort((a,b) =>sortHandel(a,b)).map( (e,i) => 
+              <div className={`col-4`} >
+              <div className={`p-2`}>
+                <ProjectCard data={e} />
+            </div></div>
+            )
+} 
+
         </div>
+
         </div>
         <Footer />
       </div>
