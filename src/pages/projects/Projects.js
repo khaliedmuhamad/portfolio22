@@ -41,7 +41,7 @@ const Projects = (props) => {
           {<Options data={props.data}  getOptions={setOption}  />}
             <div className='row'>
             { (props.data.projects || []).filter((e) =>filterHandel(e)).sort((a,b) =>sortHandel(a,b)).map( (e,i) => 
-              <div className={`col-4`} >
+              <div className={`col-lg-4 col-md-6 col-sm-12`} >
               <div className={`p-2`}>
                 <ProjectCard data={e} />
             </div></div>

@@ -5,11 +5,13 @@ function ProjectCard(props) {
 
 
   return (
-    <div className="ProjectCard bg-transparent">
-      <div className="image"></div>
+    <div className="ProjectCard bg-transparent shadow border mb-4">
+      <div className="image d-flex align-items-end justify-content-center">
+        {props.data.coverImg ? <img src={props.data.coverImg} width="98%" /> :""}
+      </div>
 
       <div className="info">
-      <div className="split d-flex justify-content-center "><span className="icon d-inline-block text-light text-lg d-flex justify-content-center align-items-center"><FaLaptopCode /></span></div>
+      <div className="split d-flex justify-content-center " style={{background:props.data.bg}}><span style={{background:props.data.bg}} className="icon d-inline-block text-light text-lg d-flex justify-content-center align-items-center"><FaLaptopCode /></span></div>
 
         <div className="head px-2">
           <h3>{props.data.name}</h3>
