@@ -3,6 +3,12 @@
     overflow: hidden;
     border: 1px solid #f2925a46;
     border-radius: 5px;
+    transition: all 0.25s linear;
+
+}
+.ProjectCard:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.55) !important;
+    transform: translateY(-5px);
 }
 .ProjectCard .image{
     width: 100%;
@@ -47,4 +53,7 @@
 } 
 .ProjectCard .info .head{
     
+}
+.head h3{
+    font-weight: 300;
 }

@@ -6,6 +6,7 @@ import {DiBootstrap, DiCss3Full, DiJqueryLogo, DiJsBadge, DiNodejs, DiReact, DiS
 import {SiExpress, SiPug, SiTypescript} from "react-icons/si"
 import {BsFillTerminalFill} from "react-icons/bs";
 import {FaGit} from "react-icons/fa";
+import file from "./Resume-Khaled-Mohamed (1).pdf"
 import Footer from "../../componants/footer/Footer";
 export default function About() {
   const [skillslang] = useState([
@@ -93,9 +94,8 @@ export default function About() {
                 into the coding web in my head.
               </p>
               <a
-                href={
-                  "https://doc-00-8k-docs.googleusercontent.com/docs/securesc/j17fp79voom3j3gko4k5ihi8bmvt6ooh/aoa56eh1vgi4eulgn6h5kidcr40hf635/1651814850000/06413973774811751786/06413973774811751786/1lV2yWAMZyeP4XQYN1xnF58Vt_kmVQeMU?e=download&ax=ACxEAsaPiprvFdj7QDLDCDsHEZU0e2fXpl1CSSFyrmfKbRnTGye5x0CDElol2957vAfh91AJPXMjM1EqcDcsy87Q-DjWXC0JGTzQl7xQZwuq0NYCKVZN03BCfplUWOJlDzf554JY7XrDNjD3SiPS1elKb2eSygKVLz2zF9Znu5I2rgT03Ry9osUFHXfyYpod82NO17S7RfjjScu3gRuZ883tgNiNFiMsXrqE1inR0ZVrvl-mF902ykGguib6mCIDNuI0Mq2RcBs6hp-ZR5Gr-iiS41MHeOzMbNicQNUZ4w44sUkz1XUMJCYt9RxlW1no12lpihoCsrmB1npqMQnbI65mP_0FBngU6fN2O40UNCSzoI_HRlNbtE61SWRJUjS30BvavpC3JCwIvVkRt7A4yaUUzW-70RswV8EFYusWPpPtSJm2Lv4Pxi7vRz2HRXvte-Aory9u0NrF2Uax6WYb5fYAnuAPoouJ0KsGNmWw6vYGUGFOAr1poU6C0i5g1yCwNFJEN-hHdBfFlS1CKs4UzL6yUulKfUaMT5XDlXtIpm_5KXvDTci0_Hu3KeqoOnU_CiDH4R-3k9F78BE4tLojzUFP1P20OZYLNAHHJshPwgjHvVVy51qVJcjwMlFTO2QhWUTfRZBVxWNvauXjCmKs59UAPBYv3lgAMWb0AS1ZFLC0FyPCrYVsMfnFJ2rrBRMZuWX_tRFGXM0ry6iGMg&authuser=0&nonce=sf9u75lqp2534&user=06413973774811751786&hash=tmvo3meibko0p4icibb95hdohgsfgbq6"
-                }
+                href={file}
+                download={file}
               >
                 <button className="btn btn-lg btn-success">
                   Download resume
