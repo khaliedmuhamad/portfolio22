@@ -9,6 +9,7 @@ import Work from "./pages/work/Work";
 import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import  {web , excel ,eng} from "./data.js"
+import Details from "./pages/details/Details";
 function App() {
 
 
@@ -30,6 +31,8 @@ function App() {
             element={<Projects data={web} />}
             exact
           />
+          <Route path={'/work/web-development/:id'} element={<Details />} exact />
+
           <Route path="/work/excel" element={<Projects data={excel} />} exact />
           <Route path="/work/M-eng" element={<Projects data={eng} />} exact />
         </Routes>

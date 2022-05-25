@@ -9,6 +9,7 @@ const web = {
       coverImg: "/imgs/works/web/kotam.PNG",
       link: "",use:["html","css","javaScript","bootstarp"],
       bg: "#e68ded",
+      id:1
     },
     {
       name: "book shop",
@@ -19,6 +20,8 @@ const web = {
       link: "https://bostore.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#ee434c",
+      id:2
+
     },
     {
       name: "discover",
@@ -28,6 +31,8 @@ const web = {
       coverImg: "/imgs/works/web/discover.png",
       link: "",use:["html","css","javaScript","bootstarp"],
       bg: "#947155",
+      id:3
+
     },
     {
       name: "clinical landing page",
@@ -37,6 +42,8 @@ const web = {
       coverImg: "/imgs/works/web/medical.png",
       link: "",use:["html","css","javaScript","bootstarp"],
       bg: "#4566f1",
+      id:4
+
     },
     {
       name: "ecommerce",
@@ -47,6 +54,8 @@ const web = {
       link: "https://koomercelive.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#28a745",
+      id:5
+
     },
     {
       name: "corona live results",
@@ -57,6 +66,8 @@ const web = {
       link: "https://cocoro.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#262c7c",
+      id:6
+
     },
     {
       name: "hotal landing page",
@@ -67,6 +78,8 @@ const web = {
       link: "https://kotmal.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#3f4332",
+      id:7
+
     },
     {
       name: "old porfolio",
@@ -77,6 +90,7 @@ const web = {
       link: "https://khali3d.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#9e8c87",
+      id:8
     },
     {
       name: "weather app",
@@ -87,6 +101,7 @@ const web = {
       link: "https://weatherfine.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#5e3e20",
+      id:9
     },
     {
       name: "ko Gitbub",
@@ -97,6 +112,7 @@ const web = {
       link: "https://kogit.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#6246ea",
+      id:10
     },
     {
       name: "quats",
@@ -107,6 +123,7 @@ const web = {
       link: "https://khaliedqouts.netlify.app/",
       use:["html","css","javaScript","bootstarp"],
       bg: "#ff884b",
+      id:11
     }   
   ],
   techarr: ["all", "HTMLCSS", "PureJs", "ReactJs", "ReactNodeJs"],

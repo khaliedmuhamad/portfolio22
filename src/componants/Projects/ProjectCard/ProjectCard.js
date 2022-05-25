@@ -2,6 +2,7 @@ import React from "react";
 import "./ProjectCard.css";
 import {FaLaptopCode } from "react-icons/fa";
 import {AiOutlineCoffee ,AiOutlineAlert  } from "react-icons/ai";
+import { Link } from "react-router-dom";
 function ProjectCard(props) {
 
 
@@ -22,22 +23,25 @@ function ProjectCard(props) {
           <h5>{props.data.date}</h5>
         </div>
         <div className="links d-flex">
-
-        <a href={props.data.link} className="col-5 " rel="noopener noreferrer"  target="_blank">
-        <li className="social-item mt-2 list-unstyled " style={{background:props.data.bg}}>
+      
+        <a href={""} className="col-5 " rel="noopener noreferrer"  target="_blank">
+       
+        <li className="btn-item mt-2 list-unstyled " style={{background:props.data.bg}}>  <Link to={`/work/web-development/`+ props.data.id} exact>
           <button
             type="button"
             className="btn btn-transparent text-light"
             data-bs-toggle="tooltip"
             data-bs-placement="left"
-            title={"more"}
-            
+            title={"more"} 
           >
             More 
             <AiOutlineCoffee className="text-lg ms-3 h5" />
-          </button>
+          </button>            </Link>
         </li>
+
+
             </a>
+
             <a href={props.data.link} className="col-5 offset-2"  rel="noopener noreferrer"  target="_blank">
         <li className="mt-2 list-unstyled " style={{background:props.data.bg}} >
           <button
