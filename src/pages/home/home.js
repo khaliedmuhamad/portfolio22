@@ -13,70 +13,66 @@ function Home() {
   const [carrers] = useState([
     {
       data: "full stack developer",
-      path:"/imgs/avtars",
+      path: "/imgs/avtars",
       imgSrc: "full",
       icon: <FaLaptopCode />,
       bg: "998ccd",
-      
-
     },
     {
       data: "mechanical Power engineer",
-      path:"/imgs/avtars",
+      path: "/imgs/avtars",
 
       imgSrc: "eng",
       icon: <GiMechanicGarage />,
       bg: "3D2C8D",
-
     },
     {
       data: "excel specialist",
-      path:"/imgs/avtars",
+      path: "/imgs/avtars",
       imgSrc: "excel",
       icon: <SiMicrosoftexcel />,
       bg: "916BBF",
-      avatar:"<Meexcel />"
-
+      avatar: "<Meexcel />",
     },
     {
       data: "Football data collector",
-      path:"/imgs/avtars",
+      path: "/imgs/avtars",
       imgSrc: "arqam",
       icon: <RiFootballFill />,
       bg: "1C0C5B",
-
     },
   ]);
-  const [dark,setDark] =useState(false)
+  const [dark, setDark] = useState(false);
   const [Cindex, setCindex] = useState(0);
 
-  useEffect(() => {
-  }, [Cindex]);
+  useEffect(() => {}, [Cindex]);
 
   return (
     <div className="m-0 page">
-      <div className={` page-overlay ${!dark ? "light":"dark"} `}>
-      <Navbar getDark={setDark} />
-        <div className="container content">
-          <div className="d-flex align-items-center ">
-            <div className="col-4 my-info   text-left">
-              <h2 className="hi">Hello! I'm</h2>
-              <h2 className="name h1"> Khaled Mohamed</h2>
+      <div className={` page-overlay ${!dark ? "light" : "dark"} `}>
+        <Navbar getDark={setDark} />
+        <div className="container content pt-5">
+          <div className="d-flex flex-lg-row  flex-column    justify-content-center align-items-center ">
+            <div className="col-lg-4 col-12  my-info  text-lg-start text-center py-4">
+              <h2 className="hi text-capitalize">Hello! I'm</h2>
+              <h2 className="name h1 text-capitalize"> Khaled Mohamed</h2>
               <h2 className="job ">
-                {linearS.lines} <span className="d-inline-block m-0 p-0" >{carrers[Cindex].data}</span>
+                {linearS.lines}{" "}
+                <span className="d-inline-block m-0 p-0 text-capitalize h3">
+                  {carrers[Cindex].data}
+                </span>
               </h2>
             </div>
-            <div className="text-center col-8">
+            <div className="text-center col-lg-8 col-12 py-md-5 ">
               <Carousel content={carrers} getIndex={setCindex} />
             </div>
-            <div className="lol">
-              <Sociallinks />
-            </div>
+          </div>
+          <div className="social-media">
+            <Sociallinks />
           </div>
         </div>
         <Footer />
       </div>
-      
     </div>
   );
 }

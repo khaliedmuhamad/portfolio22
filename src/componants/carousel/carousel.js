@@ -4,7 +4,6 @@ import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 const Carousel = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselShow = document.querySelector(".carousel-show");
   const bigPuuple = document.querySelector(".carousel-big-pupple");
   const pupple1 = document.querySelector(".carousel-small-pupple#pupple1");
   const pupple2 = document.querySelector(".carousel-small-pupple#pupple2");
@@ -12,37 +11,6 @@ const Carousel = (props) => {
   const pupple4 = document.querySelector(".carousel-small-pupple#pupple4");
   const jobtext = document.querySelector("h2.job span");
 
-  const effectHandel = () => {
-    props.getIndex(currentIndex);
-    nextPupplePos(currentIndex);
-    jopAnimate();
-    bgAnimate();
-  };
-  useEffect(() => {
-    effectHandel();
-  }, [currentIndex]);
-
-  const dynamicStylesHome = () => {
-    if (bigPuuple == null ) {
-      console.log("wait...");
-    } else {
-      bigPuuple.style.width = window.innerWidth / 2.5 + "px";
-      bigPuuple.style.height = window.innerWidth / 2.5 + "px";
-/*
-      pupple1.style.width = window.innerWidth / 1.5 + "px";
-      pupple1.style.height = window.innerWidth / 1.5 + "px";
-      pupple2.style.width = window.innerWidth / 1.5 + "px";
-      pupple2.style.height = window.innerWidth / 1.5 + "px";
-      pupple3.style.width = window.innerWidth / 1.5 + "px";
-      pupple3.style.height = window.innerWidth / 1.5 + "px";
-      pupple4.style.width = window.innerWidth / 1.5 + "px";
-      pupple4.style.height = window.innerWidth / 1.5 + "px";*/
-    }
-  };
-  
-  window.addEventListener("resize", () => {
-    dynamicStylesHome();
-  });
   const nextPupplePos = (e) => {
     if (pupple1 == null) {
       return "wait...";
@@ -135,12 +103,14 @@ setInterval(() => {
 
   const bigPuupleStyles = [{ opacity: 0.9, color: "#6612f2" }, { opacity: 1 }];
   const bigPuupleTiming = {
-    duration: 500,
+    duration: 1000,
   };
   const bgAnimate = () => {
-    bigPuuple == null
-      ? console.log("")
-      : bigPuuple.animate(bigPuupleStyles, bigPuupleTiming);
+    if (bigPuuple == null) {
+      return "";
+    } else {
+      bigPuuple.animate(bigPuupleStyles, bigPuupleTiming);
+    }
   };
 
   //big animation run text
@@ -152,21 +122,40 @@ setInterval(() => {
     duration: 500,
   };
   const jopAnimate = () => {
-    jobtext == null
-      ? console.log("")
-      : jobtext.animate(textanimationStyle, textanimationTiming);
+    if (jobtext == null) {
+      return "";
+    } else {
+      jobtext.animate(textanimationStyle, textanimationTiming);
+    }
   };
   const imgwaiting = (path, name) => {
     return <img src={`${path + "/" + name}.webp`} alt={name} width={"100%"} />;
   };
+  useEffect(() => {
+    props.getIndex(currentIndex);
+    nextPupplePos(currentIndex);
+    jopAnimate();
+    bgAnimate();
+  }, [
+    currentIndex,
+    props,
+    bigPuuple,
+    bigPuupleStyles,
+    bigPuupleTiming,
+    jobtext,
+    pupple1,
+    pupple2,
+    pupple3,
+    pupple4,
+  ]);
 
   return (
     <div className="custom-carousel">
-      <div className="d-flex">
-        <div className="carousel-controlers col-3">
+      <div className="d-flex flex-lg-row flex-md-row flex-column ">
+        <div className="carousel-controlers  col-md-3 col-12 py-sm-5">
           {props.content.map((el, index) => (
             <div
-              className={`carousel-small-pupple btn`}
+              className={`carousel-small-pupple btn my-sm-0 m-0`}
               id={`pupple${index + 1}`}
               style={{
                 backgroundColor: `#${el.bg}`,
@@ -178,12 +167,11 @@ setInterval(() => {
                 thisPupple(index);
               }}
             >
-              <span className="icons text-light  text-center">{el.icon} </span>
+              <span className="icons  text-center">{el.icon} </span>
             </div>
           ))}
-
           <button
-            className="btn btn-lg bg-transparent arrow"
+            className="btn btn-lg bg-transparent arrow my-sm-0 mt-5 d-sm-block d-none"
             onClick={() => {
               backPupple();
             }}
@@ -191,7 +179,7 @@ setInterval(() => {
             <GoChevronUp />
           </button>
           <button
-            className="btn btn-lg bg-transparent arrow"
+            className="btn btn-lg bg-transparent arrow my-sm-0 my-5 d-sm-block d-none"
             onClick={() => {
               nextPupple();
             }}
@@ -199,7 +187,10 @@ setInterval(() => {
             <GoChevronDown />
           </button>
         </div>
-        <div id="carousel-show" className="carousel-show col-9">
+        <div
+          id="carousel-show"
+          className="carousel-show col-md-9 col-12 my-sm-0 my-5 pt-5"
+        >
           <div
             className={`carousel-big-pupple mx-auto bg-${props.content[currentIndex].bg}`}
             style={{ backgroundColor: `#${props.content[currentIndex].bg}` }}

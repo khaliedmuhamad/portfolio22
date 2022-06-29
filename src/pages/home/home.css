@@ -1,36 +1,149 @@
+/*
+X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+*/
+@media (max-width: 575px) {
+  .carousel-controlers .carousel-small-pupple:nth-of-type(1) {
+    top: 45% !important;
+    left: 15% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(2) {
+    top: 5% !important;
+    left: 35% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(3) {
+    top: 5% !important;
+    left: 55% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(4) {
+    top: 45% !important;
+    left: 75% !important;
+  }
+  .arrow:nth-of-type(1) {
+    transform: rotate(-135deg) scale(1.5);
+    top: 150% !important;
+    left: 5% !important;
+  }
+  .arrow:nth-of-type(2) {
+    transform: rotate(-45deg) scale(1.5);
+    top: 130% !important;
+    left: 90% !important;
+  }
+  .carousel-big-pupple {
+    width: 18rem;
+    height: 18rem;
+  }
+  .carousel-controlers .carousel-small-pupple {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .carousel-controlers .carousel-small-pupple span.icons {
+    font-size: 1.25rem !important;
+  }
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .carousel-controlers .carousel-small-pupple:nth-of-type(1) {
+    top: 45% !important;
+    left: 15% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(2) {
+    top: 5% !important;
+    left: 35% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(3) {
+    top: 5% !important;
+    left: 55% !important;
+  }
+  .carousel-controlers .carousel-small-pupple:nth-of-type(4) {
+    top: 45% !important;
+    left: 75% !important;
+  }
+  .arrow:nth-of-type(1) {
+    transform: rotate(-135deg) scale(1.5);
+    top: 150% !important;
+    left: 5% !important;
+  }
+  .arrow:nth-of-type(2) {
+    transform: rotate(-45deg) scale(1.5);
+    top: 130% !important;
+    left: 90% !important;
+  }
+  .carousel-big-pupple {
+    width: 20rem;
+    height: 20rem;
+  }
+}
 
-.home .my-info .hi {
-  color: var(--gray);
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-big-pupple {
+    box-shadow: 0 0px 0px 5px rgb(255, 255, 255, 0.45),
+      0 0px 0px 20px rgb(255, 255, 255, 0.34),
+      0 0px 0px 40px rgb(255, 255, 255, 0.23),
+      0 0px 0px 60px rgb(255, 255, 255, 0.12);
+    width: 22rem;
+    height: 22rem;
+  }
+  .carousel-controlers .carousel-small-pupple {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .carousel-controlers .carousel-small-pupple span.icons {
+    font-size: 1.5rem !important;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-controlers .carousel-small-pupple {
+    width: 4rem;
+    height: 4rem;
+  }
+  .carousel-small-pupple span.icons {
+    font-size: 2rem;
+  }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  /* social media box */
+  .social-media {
+    font-size: 2rem;
+  }
+}
+
+.my-info h2.hi,
+.my-info h2.job {
+  color: var(--secondText);
   font-weight: 200;
 }
-.home .my-info .name {
-  font-weight: 400;
+
+.my-info h2.name {
+  color: var(--mainText);
+  font-weight: 200;
 }
 
-
-.home .my-info .job span{
+.my-info .job span {
   color: var(--gray);
   font-weight: 200;
   text-transform: capitalize;
   transform: translateY(3px);
 }
 
-#lines-svg line{
+#lines-svg line {
   transform: scale(1.1);
   stroke: var(--violet);
 }
 #lines-svg line:nth-last-of-type(1) {
   animation: lin1 2s infinite;
-
 }
 
 #lines-svg line:nth-last-of-type(2) {
   animation: lin2 1.9s infinite;
-
 }
 #lines-svg line:nth-last-of-type(3) {
   animation: lin3 1.8s infinite;
-
 }
 
 @keyframes lin1 {
@@ -78,12 +191,13 @@
   }
 }
 
-.lol{
+.social-media {
   position: absolute;
   right: 15px;
+  top: 40vh;
+  font-size: 1rem;
 }
-.avatar{
+.avatar {
   width: 100%;
   height: 100%;
-  
 }

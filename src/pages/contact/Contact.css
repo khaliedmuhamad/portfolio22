@@ -9,4 +9,10 @@
   background: none !important;
   height: 100%;
 }
+.contact .head {
+  color: var(--mainText);
+}
 
+.contact .meform {
+  color: var(--secondText);
+}

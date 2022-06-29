@@ -1,4 +1,12 @@
-.projects-overlay{
-    height: auto !important;
-    min-height:   100% !important;
+.projects-overlay {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+}
+.page-overlay {
+  overflow-x: hidden !important;
+}
+.dark.projects-overlay {
+  background-color: #160040 !important;
+  color: var(--secondText);
 }

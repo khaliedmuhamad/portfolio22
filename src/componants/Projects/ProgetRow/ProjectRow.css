@@ -1,0 +1,90 @@
+.light .grid-projects {
+  padding: 0.5rem;
+  min-height: 328px;
+  border-radius: 10px;
+  box-shadow: 0 0 9px 0px #b3bef526;
+}
+.dark .grid-projects {
+  padding: 0.5rem;
+  min-height: 328px;
+  border-radius: 10px;
+  box-shadow: 0 0 9px 3px #3c4ef015;
+}
+.grid-projects .info-div .title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--mainText);
+}
+.grid-projects .info-div .date {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2rem;
+  color: var(--violet);
+}
+.grid-projects .info-div .summury {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2rem;
+  color: var(--darkvi);
+  text-transform: capitalize;
+  color: var(--secondText);
+}
+/*
+X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+*/
+@media (max-width: 349px) {
+  .grid-projects .info-div .title {
+    font-size: 0.1rem;
+  }
+  .grid-projects .info-div .date {
+    font-size: 0.75rem;
+  }
+  .grid-projects .info-div .summury {
+    font-size: 0.75rem;
+  }
+  .tos li {
+    width: 2rem;
+  }
+  .tos li button {
+    font-size: 0.55rem !important;
+  }
+}
+@media (min-width: 575px) and (max-width: 350px) {
+  .grid-projects .info-div .title {
+    font-size: 0.75rem;
+  }
+  .grid-projects .info-div .date {
+    font-size: 0.75rem;
+  }
+  .grid-projects .info-div .summury {
+    font-size: 0.75rem;
+  }
+  .tos li {
+    width: 6rem;
+  }
+  .tos li button {
+    font-size: 0.75rem !important;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 991px) {
+  .grid-projects .info-div .title {
+    font-size: 1.25rem;
+  }
+  .grid-projects .info-div .date {
+    font-size: 0.75rem;
+  }
+  .grid-projects .info-div .summury {
+    font-size: 0.75rem;
+  }
+  .tos li {
+    width: 6rem;
+  }
+  .tos li button {
+    font-size: 0.75rem !important;
+  }
+}

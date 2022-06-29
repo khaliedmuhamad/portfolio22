@@ -1,12 +1,8 @@
-.social{
-
+.social .social-item button {
+  transform: scale(1.5);
+  color: var(--secondText);
 }
-.social .social-item button{
-    transform: scale(1.5);
-    color: var(--gray);
-}
-
-.social .social-item button:hover{
-    transform: scale(1.6);
-    color: var(--violet);
+.social .social-item button:hover {
+  transform: scale(1.6);
+  color: var(--violet);
 }

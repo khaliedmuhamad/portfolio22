@@ -1,30 +1,27 @@
-import React,{Suspense, useEffect, useState} from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Footer from "../../componants/footer/Footer";
 import Navbar from "../../componants/navbar/navbar";
 import "./Contact.css";
 
-
 export default function Contact() {
-  const [dark,setDark] =useState(false)
+  const [dark, setDark] = useState(false);
 
-  useEffect(() => {
-  }, [dark]);
+  useEffect(() => {}, [dark]);
 
-
-  const Map = React.lazy(()=> import("./Map") );
+const Map = React.lazy(() => import("./Map"));
 
   return (
     <div className="page  contact m-0 ">
-      <div className={` page-overlay ${!dark ? "light":"dark"} `}>
-      <Navbar getDark={setDark} />
+      <div className={` page-overlay ${!dark ? "light" : "dark"} `}>
+        <Navbar getDark={setDark} />
         <div className="container content pt-5">
-        <h1 className="head mb-4">Contact </h1>
-          <div className="row">
-            <div className="col-4 meform">
+          <h1 className="head mb-4">Contact </h1>
+          <div className="d-flex flex-lg-row flex-column">
+            <div className="col-lg-4 col-12 meform">
               <div className="pe-2">
                 <form className="row g-3 algin-items-between">
-                  <div className="col-md-12">
-                    <label for="inputEmail4" className="form-label">
+                  <div className="col--12">
+                    <label htmlFor="inputEmail4" className="form-label">
                       Email
                     </label>
                     <input
@@ -35,7 +32,7 @@ export default function Contact() {
                   </div>
 
                   <div className="col-12">
-                    <label for="inputAddress" className="form-label">
+                    <label htmlFor="inputAddress" className="form-label">
                       Address
                     </label>
                     <input
@@ -46,7 +43,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="col-12">
-                    <label for="inputAddress2" className="form-label">
+                    <label htmlFor="inputAddress2" className="form-label">
                       Message
                     </label>
                     <input
@@ -68,17 +65,16 @@ export default function Contact() {
                 </form>
               </div>
             </div>
-            <div className="col-8 map">
+            <div className="col-lg-8 col-12 mt-lg-0 mt-5 map">
               <div className="ps-2 h-100">
-            <Suspense fallback={() => {<img src="/imgs/wait.gif" />}}>
-            {<Map />}
-
-            </Suspense>
-</div>
+                <Suspense fallback={<div>Loading...</div>}>
+                  {<Map />}
+                </Suspense>
               </div>
             </div>
           </div>
-          <Footer />
+        </div>
+        <Footer />
       </div>
     </div>
   );

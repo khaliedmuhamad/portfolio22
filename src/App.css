@@ -1,42 +1,67 @@
-:root{
-  --darkvi:#1A1B42;
-  --lightvio:#BABAC6;
-  --lightpur:#D5D5D5;
-  --white:#ffffff;
-  --gray:#626364;
-  --black:#000000;
-  --violet:#4E00B4;
+:root .light {
+  /* for backgrounds */
+  --bgoverlay: #f4f8ffe0;
+  --bgBtn: #000000;
+  --bgeffectBtn: #4e00b4;
+  /* border */
+  --border: #ffffff;
+  /* font color */
+  --secondText: #000000a8;
+  --mainText: #000000;
+  --btnText: #ffffff;
+  /* */
+  --darkvi: #27285a;
+  --lightvio: #babac6;
+  --lightpur: #d5d5d5;
+  --white: #ffffff;
+
+  --violet: #4e00b4;
 }
-.page{
+:root .dark {
+  /* for backgrounds */
+  --bgoverlay: rgba(11, 9, 41, 0.85);
+  --bgBtn: #4e00b4;
+  --bgeffectBtn: #000000;
+  /* border */
+  --border: #1a1a3a;
+  /* font color */
+  --secondText: #ffffff59;
+  --mainText: #ffffff;
+  --btnText: #ffffff;
+
+  --darkvi: #7e808d;
+  --lightvio: #050505;
+  --lightpur: rgb(0, 0, 0);
+  --white: #050505;
+
+  --violet: #a97ce2;
+}
+body {
+  overflow-x: hidden;
+}
+.page {
   overflow-x: hidden;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url(../public/imgs/homebg.png)
+  background-image: url(/imgs/homebg.webp);
 }
-.page-overlay.light{
+.page-overlay.light {
   position: absolute;
   width: 100vw;
-  height: 100%;
-  background: #f4f8ffe0;
+  min-height: 100%;
+  background: var(--bgoverlay);
 }
-.page-overlay.dark{
+.page-overlay.dark {
   position: absolute;
   width: 100vw;
-  height: 100%;
-  background:#5b02cfe6 ;
-
+  min-height: 100%;
+  background: var(--bgoverlay);
 }
-.page-overlay.dark .content{
-color: wheat;
+.page-overlay .navbar {
+  max-height: 10%;
 }
-.page-overlay .navbar{
-  height: 10%;
-}
-.page-overlay .content{
+.page-overlay .content {
   height: 85%;
   max-height: 85%;
-}
-.page-overlay .footer{
-  height: 5%;
 }
