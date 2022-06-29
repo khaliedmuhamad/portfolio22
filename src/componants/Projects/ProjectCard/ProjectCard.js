@@ -9,7 +9,7 @@ function ProjectCard(props) {
       <div className="image d-flex align-items-end justify-content-center">
         {props.data.coverImg ? (
           <img
-            src={props.data.coverImg + ".webp"}
+            src={props.data.coverImg + ".png"}
             alt={props.data.name}
             height={"80%"}
           />

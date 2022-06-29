@@ -24,7 +24,7 @@ export default function ProjectRow(props) {
   return (
     <div className="d-flex flex-md-row flex-column grid-projects my5">
       <div className="mage-div col-md-5 col-12 text-center d-flex justify-content-center align-items-center">
-        <img src={props.data.coverImg + ".webp"} alt="img" width={"70%"} />
+        <img src={props.data.coverImg + ".png"} alt="img" width={"70%"} />
       </div>
       <div className="info-div offset-md-1 col-md-6 col-12">
         <div className="head d-flex  justify-content-between ">
