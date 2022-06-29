@@ -62,15 +62,7 @@ const Carousel = (props) => {
     /* fourth */ { top: "70%", right: "0%" },
   ]);
   
-setInterval(() => {
-  if (currentIndex < 3){setCurrentIndex(currentIndex + 1);
-    
-  }else{
-    setCurrentIndex(currentIndex - 3);
-    
-  }
 
-}, 6000);
 
 
 
