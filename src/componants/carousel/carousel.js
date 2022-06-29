@@ -61,7 +61,7 @@ const Carousel = (props) => {
     /* third */ { top: "50%", right: "45%" },
     /* fourth */ { top: "70%", right: "0%" },
   ]);
-  /*
+  
 setInterval(() => {
   if (currentIndex < 3){setCurrentIndex(currentIndex + 1);
     
@@ -72,7 +72,7 @@ setInterval(() => {
 
 }, 2000);
 
-*/
+
 
   //Get small pupples by query selector #+id el
 
