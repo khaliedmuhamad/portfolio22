@@ -13,19 +13,19 @@ export default function Work() {
       content: "web development ",
       href: "web-development",
       bg: "916BBF",
-      imgSrc: "web.jpg",
+      imgSrc: "web",
     },
     {
       content: "excel sheets ",
       href: "",
       bg: "3D2C8D",
-      imgSrc: "excel.png",
+      imgSrc: "excel",
     },
     {
       content: "Mechaniacal Engineering ",
       href: "",
       bg: "1C0C5B",
-      imgSrc: "eng.jpg",
+      imgSrc: "eng",
     },
   ]);
   return (
@@ -38,7 +38,7 @@ export default function Work() {
               <div
                 key={i}
                 className="work-pupples col-md-4 col-12"
-                style={{ backgroundImage: `URL(imgs/works/${e.imgSrc}` }}
+                style={{ backgroundImage: `URL(imgs/works/${e.imgSrc}.webp` }}
               >
                 <Link to={`/work/${e.href}`} className="d-block">
                   <div className="overlay">
