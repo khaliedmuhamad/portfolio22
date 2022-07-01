@@ -1,0 +1,27 @@
+.nomatch h1{
+    color: var(--mainText);
+}
+
+.nomatch p{
+    color: var(--secondText);
+}
+.nomatch{
+    color: var(--mainText);
+}
+
+.dark .ills-overlay img{
+    filter: brightness(0.75);
+}
+.nomatch button{
+    box-shadow: -1px 1px 14px #2125295e;
+    transition: all 0.5s linear;
+    color: rgba(255, 255, 255, 0.493);
+}
+.nomatch button span{
+
+    color: rgba(255, 255, 255, 1);
+}
+.nomatch button:hover,.nomatch button:active{
+    box-shadow: -1px 1px 14px #212529;
+    color: rgba(255, 255, 255, 0.6);
+}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { BsFillHeartFill } from "react-icons/bs";
 import "./Footer.css";
 const Footer = () => {
   const [lang, setLang] = useState("EN");
   return (
     <div className="footer ">
       <div className=" footer-overlay align-items-end w-100 h-100 d-flex justify-content-between">
-        <div className="copy-rights ps-2">© 2022 Khaled Mohamed ❤</div>
+        <div className="copy-rights ps-2">© 2022 Khaled Mohamed <BsFillHeartFill className="text-danger" />  </div>
         <div className="language ">
           <div className="btn-group dropup  ">
             <button

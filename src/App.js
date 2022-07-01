@@ -10,6 +10,7 @@ import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import { web, excel, eng } from "./data.js";
 import Details from "./pages/details/Details";
+import NoMatch from "./pages/NoMatch/NoMatch";
 function App() {
   return (
     <div className="App ">
@@ -33,9 +34,9 @@ function App() {
             element={<Details />}
             exact
           />
-
           <Route path="/work/excel" element={<Projects data={excel} />} exact />
           <Route path="/work/M-eng" element={<Projects data={eng} />} exact />
+          <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
     </div>
