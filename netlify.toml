@@ -1,3 +1,6 @@
+[functions]
+  directory = "./"
+
 [[redirects]]
   from ="/*"
   to="/404"
