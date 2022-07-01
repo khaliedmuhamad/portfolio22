@@ -36,7 +36,7 @@ function App() {
           />
           <Route path="/work/excel" element={<Projects data={excel} />} exact />
           <Route path="/work/M-eng" element={<Projects data={eng} />} exact />
-          <Route path="/*" element={<NoMatch />} />
+          <Route path="/404" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
     </div>
