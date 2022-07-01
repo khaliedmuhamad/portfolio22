@@ -1,7 +1,4 @@
-[functions]
-  directory = "./"
-
-[[redirects]]
+[redirects]
   from ="/*"
   to="/404"
   status = 404
