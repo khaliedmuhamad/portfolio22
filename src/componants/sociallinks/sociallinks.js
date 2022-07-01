@@ -28,14 +28,13 @@ const Sociallinks = () => {
   return (
     <ul className="list-unstyled social d-flex flex-column ">
       {social.map((item, index) => (
-
-          <li className="social-item mt-2 " key={index}>
         <Anochor
           href={item.link}
           rel="noopener noreferrer"
           key={index}
           target="_blank"
         >
+          <li className="social-item mt-2 " key={index}>
             <button
               type="button"
               className="btn btn-transparent"
@@ -45,10 +44,8 @@ const Sociallinks = () => {
             >
               {item.icon}
             </button>
-
-        </Anochor>            
           </li>
-
+        </Anochor>
       ))}
     </ul>
   );

@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./carousel.css";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
+
+
 const Carousel = (props) => {
+// 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+//catch items to animates
   const bigPuuple = document.querySelector(".carousel-big-pupple");
   const pupple1 = document.querySelector(".carousel-small-pupple#pupple1");
   const pupple2 = document.querySelector(".carousel-small-pupple#pupple2");
@@ -11,6 +16,7 @@ const Carousel = (props) => {
   const pupple4 = document.querySelector(".carousel-small-pupple#pupple4");
   const jobtext = document.querySelector("h2.job span");
 
+//replacement postions of small pupples as this index   
   const nextPupplePos = (e) => {
     if (pupple1 == null) {
       return "wait...";
@@ -55,6 +61,7 @@ const Carousel = (props) => {
     }
   };
 
+  //intial postions of small pupples 
   const [styles] = useState([
     /* first */ { top: "10%", right: "0%" },
     /* second */ { top: "30%", right: "45%" },
@@ -62,8 +69,20 @@ const Carousel = (props) => {
     /* fourth */ { top: "70%", right: "0%" },
   ]);
   
+/*
+  //useEffect to manage setInterval to start timer when first render only
+  useEffect(() => {
+    setInterval(() => {
+      if (currentIndex < 3){setCurrentIndex(currentIndex + 1);
+      }else{
+        setCurrentIndex(currentIndex - 3);
+      }
+    
+    }, 3000);
+  }, [currentIndex])
+  
 
-
+*/
 
 
   //Get small pupples by query selector #+id el

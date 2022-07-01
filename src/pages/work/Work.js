@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Work.css";
 import Navbar from "../../componants/navbar/navbar";
 import { Link } from "react-router-dom";
 
 export default function Work() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState();
 
-  useEffect(() => {}, [dark]);
+
 
   const [data] = useState([
     {
@@ -28,6 +28,8 @@ export default function Work() {
       imgSrc: "eng",
     },
   ]);
+
+
   return (
     <div className="page m-0 ">
       <div className={`page-overlay ${!dark ? "light" : "dark"} `}>
@@ -38,7 +40,7 @@ export default function Work() {
               <div
                 key={i}
                 className="work-pupples col-md-4 col-12"
-                style={{ backgroundImage: `URL(imgs/works/${e.imgSrc}.webp` }}
+                style={{ backgroundImage: `URL(/imgs/works/${e.imgSrc}.webp` }}
               >
                 <Link to={`/work/${e.href}`} className="d-block">
                   <div className="overlay">

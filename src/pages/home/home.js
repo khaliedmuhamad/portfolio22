@@ -10,6 +10,7 @@ import "./home.css";
 import linearS from "./lines";
 import Footer from "../../componants/footer/Footer";
 function Home() {
+
   const [carrers] = useState([
     {
       data: "full stack developer",
@@ -42,11 +43,18 @@ function Home() {
       bg: "1C0C5B",
     },
   ]);
-  const [dark, setDark] = useState(false);
+
   const [Cindex, setCindex] = useState(0);
 
   useEffect(() => {}, [Cindex]);
 
+  const [dark, setDark] = useState();
+
+  
+
+
+
+  
   return (
     <div className="m-0 page">
       <div className={` page-overlay ${!dark ? "light" : "dark"} `}>

@@ -60,11 +60,21 @@ export default function About() {
 
     }
   };
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState();
 
   window.addEventListener("resize", () => {
     dynamicStylesAbout(imgPupple);
   });
+
+//intiial set to dark from ls run for 1 time before render
+
+
+//re set to dark from ls run if change  before render
+
+
+
+
+
 
   useEffect(() => {}, [imgPupple]);
 
@@ -173,7 +183,7 @@ export default function About() {
                       <h3 className="">
                         Mechanical Power Dep.{" "}
                         <Anochor
-                          href="https://bu.edu.eg/catalog/programs/94/2"
+                          href="https://www.feng.bu.edu.eg/en"
                           rel="noopener noreferrer"
                           target="_blank"
                           className="btn btn-sm btn-warning"
